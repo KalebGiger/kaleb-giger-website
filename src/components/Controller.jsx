@@ -14,11 +14,12 @@ import { AltDivider } from './shared/Divider'
 export function Controller() {
     return (
         <div className="page-container">
+            
             <CustomNavbar />
 
             <section id="home" className="section-one">
                 <Home />
-                <Divider color='#1a3e3e' />
+                <AltDivider color='rgb(206, 206, 206)' />
             </section>
             <section id="about" className="section-two">
                 <About />
