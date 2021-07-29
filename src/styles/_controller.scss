@@ -1,0 +1,101 @@
+// .page-container {
+//     // margin-top: 200px;
+
+//     .first-section {
+//         height: 100vh;
+//         box-sizing: border-box;
+//         // background: red;
+//         padding-top: 200px;
+//         // background: radial-gradient(#568656, #1a3e2a);
+//     }
+
+//     .fwh-section {
+//         height: 100vh;
+//         box-sizing: border-box;
+//         // padding: 35px;
+//         padding-top: 100px;
+
+//         // background: blue;
+//     }
+// }
+.section-one {
+    background-color: #1a3e2a;
+    position: relative;
+    padding: 200px 0 350px;
+    height: 100vh;
+    box-sizing: border-box;
+    // padding-top: 200px;
+}
+
+.section-two {
+    background-color: #1a3e3e;
+    padding: 100px 0 200px;
+    position: relative;
+    z-index: 10;
+    height: 100vh;
+    box-sizing: border-box;
+    padding-top: 100px;
+}
+
+.section-three {
+    background-color: #000000;
+    // padding: 100px 0 200px;
+    position: relative;
+    z-index: 20;
+    height: 100vh;
+    box-sizing: border-box;
+    padding-top: 100px;
+}
+
+@media screen and (max-width: 767px) {
+    .section-one {
+        padding: 130px 0 190px;
+    }
+    .separator {
+        bottom: -110px;
+        .separator__svg {
+            left: -20%;
+            position: relative;
+            transform: rotate(15deg);
+            width: 140%;
+        }
+    }
+}
+
+/* end Media Max-Width 767
+      ============================================================================ */
+
+.custom-shape-divider-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 61px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-alt {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-alt svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 61px;
+}

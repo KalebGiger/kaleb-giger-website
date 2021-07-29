@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+@import "mixins";
+@import "themes";
+@import "about";
+@import "customList";
+@import "customNavbar";
+@import "experience";
+@import "home";
+@import "pageContainer";
+@import "portfolio";
+@import "portfolioTemplate";
+@import "controller";
+
+body {
+    font-family: "Fira Code", monospace;
+    // background-color: map-get($theme-colors, background);
+    // background: linear-gradient(180deg, #1a3e2a 0%, rgb(17, 17, 17) 100%);
+
+    margin: 0;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.page-header {
+    color: #e2e2e2;
+}

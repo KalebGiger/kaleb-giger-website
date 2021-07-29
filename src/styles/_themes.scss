@@ -1,0 +1,9 @@
+$theme-colors: (
+    "primary": #5cdb94,
+    "background": #1A3E2A,
+    "info": tomato,
+    "danger": teal,
+);
+// Import Bootstrap and its default variables
+// @import "~bootstrap/scss/bootstrap.scss";
+@import "~bootstrap/scss/bootstrap";

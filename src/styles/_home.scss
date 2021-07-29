@@ -1,0 +1,26 @@
+@import "mixins";
+
+.home-page-container {
+    // .hero {
+    //     padding: 200px 0;
+    // }
+
+    h1 {
+        font-size: 50pt;
+    }
+
+    .hero-name {
+        color: #e2e2e2;
+        font-weight: 900;
+    }
+
+    .hero-intro {
+        color: #5cdb94;
+    }
+
+    .hero-subtitle {
+        color: #adadad;
+    }
+
+    @include typewriter(1.5s, 24);
+}

@@ -1,0 +1,45 @@
+@import "mixins";
+
+.sticky-top {
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+}
+
+a {
+    position: relative;
+}
+
+a::before {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+a::before {
+    content: " ";
+    border-left: 0.1em solid map-get($theme-colors, primary);
+    border-bottom: 0.1em solid map-get($theme-colors, primary);
+
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    inset: 0 0 0 0;
+    // background: map-get($theme-colors, primary);
+    z-index: -1;
+    transition: transform 0.3s ease;
+    margin-top: 15px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+
+    color: map-get($theme-colors, primary);
+
+    // margin: 10px;
+}

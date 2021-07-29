@@ -1,0 +1,32 @@
+@import "mixins";
+
+.about-page-container {
+
+    .portrait-container {
+        width: 50px;
+        height: 50px;
+    }
+
+    .portrait-container img {
+        width: 50%;
+        height: auto;
+    }
+
+    .bio {
+        color: #adadad;
+    }
+    
+    @include typewriter(1s, 16);
+
+    ul {
+        list-style: none; /* Remove default bullets */
+    }
+
+    ul li::before {
+        content: "\2013"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+        color: map-get($theme-colors, primary); /* Change the color */
+        display: inline-block; /* Needed to add space between the bullet and the text */
+        width: 1em; /* Also needed for space (tweak if needed) */
+        margin-left: -1em; /* Also needed for space (tweak if needed) */
+    }
+}
