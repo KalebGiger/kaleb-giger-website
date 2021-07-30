@@ -8,6 +8,7 @@ import Image from 'react-bootstrap/Image'
 import voicesImage from '../../../images/testers.png'
 import ListGroup from 'react-bootstrap/ListGroup'
 import { PortfolioTemplate } from './PortfolioTemplate'
+import { Link, useStaticQuery, graphql } from "gatsby"
 
 export function Portfolio() {
 
@@ -16,7 +17,7 @@ export function Portfolio() {
       projects: allMarkdownRemark(
         filter: {
           fileAbsolutePath: { regex: "/projects/" }
-          frontmatter: { showInProjects: { ne: false } }
+          
         }
         sort: { fields: [frontmatter___date], order: DESC }
       ) {
@@ -26,9 +27,6 @@ export function Portfolio() {
               title
               subtitle
               description
-              images
-              github
-              external
             }
             html
           }
@@ -36,6 +34,23 @@ export function Portfolio() {
       }
     }
   `);
+
+    const projects = data.projects.edges.filter(({ node }) => node);
+
+    const projectInner = node => {
+        const { frontmatter, html } = node;
+        const { title, subtitle, description } = frontmatter;
+
+        return (
+            <PortfolioTemplate
+                mainImage={voicesImage}
+                images={voicesImage}
+                subtitle={subtitle}
+                description={description}
+                title={title}
+            />
+        );
+    };
 
     return (
         <Container className="portfolio-page-container">
@@ -46,25 +61,9 @@ export function Portfolio() {
             </div>
 
             <div className="portfolio-content">
-                <PortfolioTemplate
-                    mainImage={voicesImage}
-                    images={voicesImage}
-                    description='A PWA developed for WSFS Bank'
-                    title='Voices'
-                />
-                <PortfolioTemplate
-                    mainImage={voicesImage}
-                    images={voicesImage}
-                    description='A PWA developed for WSFS Bank'
-                    title='Voices'
-                    alternate
-                />
-                <PortfolioTemplate
-                    mainImage={voicesImage}
-                    images={voicesImage}
-                    description='A PWA developed for WSFS Bank'
-                    title='Voices'
-                />
+                {projects && projects.map(({ node }, i) => (
+                    <div key={i}>{projectInner(node)}</div>
+                ))}
             </div>
         </Container>
     );

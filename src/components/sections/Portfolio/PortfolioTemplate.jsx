@@ -10,7 +10,7 @@ import Carousel from 'react-bootstrap/Carousel'
 
 export function PortfolioTemplate(props) {
 
-    const { title, description, mainImage, images, alternate } = props;
+    const { title, description, subtitle, mainImage, images, alternate } = props;
     const [open, setOpen] = useState(false);
 
     return (
@@ -24,7 +24,7 @@ export function PortfolioTemplate(props) {
                         <Col className='project-description-column-container'>
                             <div className='project-description-column-alt'>
                                 <h2>{title}</h2>
-                                <h3>{description}</h3>
+                                <h3>{subtitle}</h3>
                             </div>
                         </Col>
                         <Col className="col-image-container">
@@ -64,7 +64,7 @@ export function PortfolioTemplate(props) {
                         <Col className='project-description-column-container'>
                             <div className={open ? 'project-description-column-open' : 'project-description-column'}>
                                 <h2>{title}</h2>
-                                <h3>{description}</h3>
+                                <h3>{subtitle}</h3>
                             </div>
                         </Col>
                         <ArrowDownIcon />
@@ -73,9 +73,7 @@ export function PortfolioTemplate(props) {
             </Button>
             <Collapse in={open}>
                 <p className='project-description'>
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-                    terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
-                    labore wes anderson cred nesciunt sapiente ea proident.
+                    {description}
                 </p>
             </Collapse>
         </div>
