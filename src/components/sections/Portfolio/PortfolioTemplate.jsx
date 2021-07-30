@@ -6,6 +6,8 @@ import Image from 'react-bootstrap/Image'
 import Button from 'react-bootstrap/Button'
 import Collapse from 'react-bootstrap/Collapse'
 import ArrowDownIcon from '../../../svg/caret-down.svg'
+import Carousel from 'react-bootstrap/Carousel'
+
 export function PortfolioTemplate(props) {
 
     const { title, description, mainImage, images, alternate } = props;
@@ -26,16 +28,28 @@ export function PortfolioTemplate(props) {
                             </div>
                         </Col>
                         <Col className="col-image-container">
-                            {open ?
-                                <Image className="portfolio-image" src={mainImage} />
+                            {/* {open ?
+                                <Carousel>
+                                    {images && images.map((image, index) => {
+                                        return (
+                                            <Carousel.Item>
+                                                <img
+                                                    className="d-block w-100"
+                                                    src={image}
+                                                    alt="First slide"
+                                                />
+                                             
+                                            </Carousel.Item>
+                                        )
+                                    })}
+                                </Carousel>
                                 :
                                 <div>
                                     <Image className="portfolio-image" src={mainImage} />
-
                                     <div className="screen-line" />
                                     <div className="image-overlay" />
                                 </div>
-                            }
+                            } */}
                             {/* <div className="portfolio-image-overlay" /> */}
                         </Col>
                     </Row>
@@ -48,14 +62,14 @@ export function PortfolioTemplate(props) {
                             {/* <div className="portfolio-image-overlay" /> */}
                         </Col>
                         <Col className='project-description-column-container'>
-                            <div className='project-description-column'>
+                            <div className={open ? 'project-description-column-open' : 'project-description-column'}>
                                 <h2>{title}</h2>
                                 <h3>{description}</h3>
                             </div>
                         </Col>
+                        <ArrowDownIcon />
                     </Row>
                 }
-                <ArrowDownIcon />
             </Button>
             <Collapse in={open}>
                 <p className='project-description'>

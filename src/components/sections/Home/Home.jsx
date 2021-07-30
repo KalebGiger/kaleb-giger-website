@@ -13,7 +13,7 @@ export function Home() {
             <Row>
                 <Col className="hero">
                     <div>
-                        <h3 className='hero-intro'>Hi, my name is</h3>
+                        <h3 className='hero-intro'><i>Hi, my name is</i></h3>
                         <div className="typewriter-container">
                             <div className="typewriter-effect">
                                 <h1 className='hero-name'>Kaleb Giger.</h1>

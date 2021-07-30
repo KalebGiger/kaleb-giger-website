@@ -1,4 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 @import "mixins";
+@import "themes";
 
 .home-page-container {
     // .hero {
@@ -10,16 +12,17 @@
     }
 
     .hero-name {
-        color: #e2e2e2;
+        color: map-get($theme-colors, text);
         font-weight: 900;
     }
 
     .hero-intro {
-        color: #5cdb94;
+        font-family: "Pacifico", cursive;
+        color: map-get($theme-colors, primary);
     }
 
     .hero-subtitle {
-        color: #adadad;
+        color: map-get($theme-colors, secondary-text);
     }
 
     @include typewriter(1.5s, 24);

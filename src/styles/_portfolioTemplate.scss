@@ -22,9 +22,9 @@
         bottom: 0;
         // width: 200%;
         // height: 200vh;
-        background: transparent url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
-        background-repeat: repeat;
-        animation: portfolio-image-bg-animation 0.2s infinite;
+        // background: transparent url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
+        // background-repeat: repeat;
+        // animation: portfolio-image-bg-animation 0.2s infinite;
         opacity: 0.9;
         visibility: visible;
         overflow: hidden;
@@ -38,8 +38,8 @@
         display: block;
         // -webkit-filter: grayscale(100%);
         // filter: grayscale(100%);
-        -webkit-filter: sepia(100%) hue-rotate(90deg) saturate(400%);
-        filter: sepia(100%) hue-rotate(90deg) saturate(400%);
+        // -webkit-filter: sepia(100%) hue-rotate(90deg) saturate(400%);
+        // filter: sepia(100%) hue-rotate(90deg) saturate(400%);
         -webkit-transition: 0.3s ease-in-out;
         transition: 0.3s ease-in-out;
         overflow: hidden;
@@ -139,7 +139,25 @@ h3 {
     padding: 10px;
     margin-right: -15%;
     margin-left: -15%;
-    background: #1d1d1d;
+    background: #133047;
+    z-index: 9999;
+    height: 200px;
+    width: 100%;
+    // margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    // justify-content: center;
+}
+
+.project-description-column-open {
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0;
+    background: #133047;
     z-index: 9999;
     height: 200px;
     width: 100%;
@@ -158,7 +176,25 @@ h3 {
     padding: 10px;
     margin-right: 15%;
     margin-left: 15%;
-    background: #1d1d1d;
+    background: #133047;
+    z-index: 9999;
+    height: 200px;
+    width: 100%;
+    // margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    // justify-content: center;
+}
+
+.project-description-column-alt-open {
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0;
+    background: #133047;
     z-index: 9999;
     height: 200px;
     width: 100%;
@@ -176,10 +212,6 @@ h3 {
     position: relative;
 }
 
-div.image-container:hover .portfolio-image {
-    -webkit-filter: none;
-    filter: none;
-}
 div.image-container:hover .image-overlay {
     background: none;
     animation: none;
@@ -187,4 +219,13 @@ div.image-container:hover .image-overlay {
 div.image-container:hover .screen-line {
     animation: none;
     border-top: none;
+}
+div.image-container:hover .project-description-column {
+    margin: 0;
+}
+div.image-container:hover .project-description-column-alt {
+    margin: 0;
+    margin-right: 15px;
+
+    // right: 15px;
 }

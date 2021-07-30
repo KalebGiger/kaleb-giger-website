@@ -19,7 +19,7 @@
 //     }
 // }
 .section-one {
-    background-color: #1a3e2a;
+    background-color: map-get($theme-colors, background);
     position: relative;
     padding: 200px 0 350px;
     height: 100vh;
@@ -28,7 +28,7 @@
 }
 
 .section-two {
-    background-color: rgb(206, 206, 206);
+    background-color: map-get($theme-colors, secondary-background);
     padding: 100px 0 200px;
     position: relative;
     z-index: 10;
@@ -38,7 +38,7 @@
 }
 
 .section-three {
-    background-color: #000000;
+    background-color: map-get($theme-colors, background);
     // padding: 100px 0 200px;
     position: relative;
     z-index: 20;

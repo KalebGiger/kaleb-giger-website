@@ -1,7 +1,6 @@
 @import "mixins";
 
 .about-page-container {
-
     .portrait-container {
         width: 50px;
         height: 50px;
@@ -13,9 +12,14 @@
     }
 
     .bio {
-        color: #adadad;
+        color: map-get($theme-colors, background);
     }
-    
+
+    .page-header {
+        color: map-get($theme-colors, background);
+        font-weight: 900;
+    }
+
     @include typewriter(1s, 16);
 
     ul {

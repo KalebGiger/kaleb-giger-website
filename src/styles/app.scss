@@ -13,6 +13,7 @@
 
 body {
     font-family: "Fira Code", monospace;
+    background-color: map-get($theme-colors, background);
     // background-color: map-get($theme-colors, background);
     // background: linear-gradient(180deg, #1a3e2a 0%, rgb(17, 17, 17) 100%);
 
@@ -23,8 +24,3 @@ body {
     outline: none;
     box-shadow: none;
 }
-
-.page-header {
-    color: #e2e2e2;
-}
-

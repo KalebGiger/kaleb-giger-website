@@ -2,6 +2,10 @@
 
 .portfolio-page-container {
     @include typewriter(1s, 18);
+    .page-header {
+        color: map-get($theme-colors, text);
+        font-weight: 900;
+    }
 }
 
 .portfolio-content {
