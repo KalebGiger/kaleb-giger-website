@@ -5,14 +5,13 @@ import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 // import { Link } from 'react-router-dom';
 import Image from 'react-bootstrap/Image'
-import voicesImage from '../../../images/testers.png'
 import ListGroup from 'react-bootstrap/ListGroup'
 import { PortfolioTemplate } from './PortfolioTemplate'
 import { Link, useStaticQuery, graphql } from "gatsby"
 
 export function Portfolio() {
 
-    const data = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     query {
       projects: allMarkdownRemark(
         filter: {
@@ -27,6 +26,12 @@ export function Portfolio() {
               title
               subtitle
               description
+              mainImage {
+                childImageSharp {
+                  gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+                }
+              }
+              company
             }
             html
           }
@@ -35,36 +40,38 @@ export function Portfolio() {
     }
   `);
 
-    const projects = data.projects.edges.filter(({ node }) => node);
+  const projects = data.projects.edges.filter(({ node }) => node);
 
-    const projectInner = node => {
-        const { frontmatter, html } = node;
-        const { title, subtitle, description } = frontmatter;
-
-        return (
-            <PortfolioTemplate
-                mainImage={voicesImage}
-                images={voicesImage}
-                subtitle={subtitle}
-                description={description}
-                title={title}
-            />
-        );
-    };
+  const projectInner = (node, index) => {
+    const { frontmatter, html } = node;
+    const { title, subtitle, description, mainImage, company } = frontmatter;
 
     return (
-        <Container className="portfolio-page-container">
-            <div className="typewriter-container">
-                <div className="typewriter-effect">
-                    <h1 className='page-header'>Portfolio</h1>
-                </div>
-            </div>
-
-            <div className="portfolio-content">
-                {projects && projects.map(({ node }, i) => (
-                    <div key={i}>{projectInner(node)}</div>
-                ))}
-            </div>
-        </Container>
+      <PortfolioTemplate
+        mainImage={mainImage}
+        images={mainImage}
+        subtitle={subtitle}
+        description={description}
+        title={title}
+        alternate={index % 2 ? true : false}
+        company={company}
+      />
     );
+  };
+
+  return (
+    <Container className="portfolio-page-container">
+      <div className="typewriter-container">
+        <div className="typewriter-effect">
+          <h1 className='page-header'>Portfolio</h1>
+        </div>
+      </div>
+
+      <div className="portfolio-content">
+        {projects && projects.map(({ node }, index) => (
+          <div key={index}>{projectInner(node, index)}</div>
+        ))}
+      </div>
+    </Container>
+  );
 }
