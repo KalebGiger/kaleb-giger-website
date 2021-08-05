@@ -1,13 +1,10 @@
-import React from 'react';
-import { useState } from 'react'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Image from 'react-bootstrap/Image'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import Button from 'react-bootstrap/Button'
-import Collapse from 'react-bootstrap/Collapse'
-import ArrowDownIcon from '../../../svg/caret-down.svg'
-import Carousel from 'react-bootstrap/Carousel'
+import React, { useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Col from 'react-bootstrap/Col';
+import Collapse from 'react-bootstrap/Collapse';
+import Row from 'react-bootstrap/Row';
+import ArrowDownIcon from '../../../svg/caret-down.svg';
 
 export function PortfolioTemplate(props) {
 
