@@ -13,20 +13,28 @@ export function PortfolioTemplate(props) {
 
     return (
         <div className='image-container'>
-            <Button
-                onClick={() => setOpen(!open)}
-                variant=''
-            >
-                {alternate ?
-                    <Row className='project-row'>
-                        <Col className='project-description-column-container'>
-                            <div className={open ? 'project-description-column-open' : 'project-description-column-alt'}>
-                                <h2>{title}</h2>
-                                <h4>{company}</h4>
-                            </div>
-                        </Col>
-                        <Col className="col-image-container">
-                            {/* {open ?
+            {alternate ?
+                <Row className='project-row'>
+                    <Col className='project-description-column-container'>
+                        <div className={open ? 'project-description-column-open' : 'project-description-column-alt'}>
+                            <h2>{title}</h2>
+                            <h4>{company}</h4>
+                            <Collapse in={open}>
+                                <p className='project-description'>
+                                    {description}
+                                </p>
+                            </Collapse>
+                            <Button
+                                onClick={() => setOpen(!open)}
+                                variant='outline'
+                                className='btn btn-outline-primary'
+                            >
+                                {open ? 'Read less' : 'Read more'}
+                            </Button>
+                        </div>
+                    </Col>
+                    <Col className="col-image-container">
+                        {/* {open ?
                                 <Carousel>
                                     {images && images.map((image, index) => {
                                         return (
@@ -48,41 +56,46 @@ export function PortfolioTemplate(props) {
                                     <div className="image-overlay" />
                                 </div>
                             } */}
-                            {/* <div className="portfolio-image-overlay" /> */}
-                            <div>
-                                <GatsbyImage image={getImage(mainImage)} alt={title} className="portfolio-image" />
-                                {/* <Image className="portfolio-image" src={mainImage} /> */}
-                                <div className="screen-line" />
-                                <div className="image-overlay" />
-                            </div>
-                        </Col>
-                        <ArrowDownIcon />
-
-                    </Row>
-                    :
-                    <Row className='project-row'>
-                        <Col className="col-image-container">
+                        {/* <div className="portfolio-image-overlay" /> */}
+                        <div>
                             <GatsbyImage image={getImage(mainImage)} alt={title} className="portfolio-image" />
                             {/* <Image className="portfolio-image" src={mainImage} /> */}
                             <div className="screen-line" />
                             <div className="image-overlay" />
-                            {/* <div className="portfolio-image-overlay" /> */}
-                        </Col>
-                        <Col className='project-description-column-container'>
-                            <div className={open ? 'project-description-column-open' : 'project-description-column'}>
-                                <h2>{title}</h2>
-                                <h4>{company}</h4>
-                            </div>
-                        </Col>
-                        <ArrowDownIcon />
-                    </Row>
-                }
-            </Button>
-            <Collapse in={open}>
-                <p className='project-description'>
-                    {description}
-                </p>
-            </Collapse>
+                        </div>
+                    </Col>
+                </Row>
+                :
+                <Row className='project-row'>
+                    <Col className="col-image-container">
+                        <GatsbyImage image={getImage(mainImage)} alt={title} className="portfolio-image" />
+                        {/* <Image className="portfolio-image" src={mainImage} /> */}
+                        <div className="screen-line" />
+                        <div className="image-overlay" />
+                        {/* <div className="portfolio-image-overlay" /> */}
+                    </Col>
+                    <Col className='project-description-column-container'>
+                        <div className={open ? 'project-description-column-open' : 'project-description-column'}>
+                            <h2>{title}</h2>
+                            <h4>{company}</h4>
+                            <Collapse in={open}>
+                                <p className='project-description'>
+                                    {description}
+                                </p>
+                            </Collapse>
+                            <Button
+                                onClick={() => setOpen(!open)}
+                                variant='outline'
+                                className='btn btn-outline-primary'
+                            >
+                                {open ? 'Read less' : 'Read more'}
+                            </Button>
+                        </div>
+                    </Col>
+
+                </Row>
+            }
+
         </div>
     )
 }

@@ -13,7 +13,7 @@ import { AltDivider } from './shared/Divider'
 
 export function Controller() {
     return (
-        <div className="page-container">
+        <div>
             
             <CustomNavbar />
 
