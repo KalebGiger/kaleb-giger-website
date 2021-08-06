@@ -1,0 +1,14 @@
+---
+slug: "/components/sections/Portfolio/Portfolio"
+date: "2020-08-22"
+title: "Personal Website"
+subtitle: "First version of my personal website."
+company: "Kaleb Giger"
+description: "This was the first version of my personal website."
+mainImage: "./personal-website-v1-main.png"
+tech:
+    - Wordpress
+    - CSS
+    - HTML
+    - JavaScript
+---

@@ -1,9 +1,14 @@
 ---
 slug: "/components/sections/Portfolio/Portfolio"
-date: "2010-05-04"
+date: "2020-08-24"
 title: "Survey Data Entry App"
 subtitle: "A desktop application that expedites the data entry process and allows for data analysis."
 company: "Jewish Relief Agency"
-description: "as;ldkfja;lskdjf;laksjd f;lkasj df;lka jsdf;lkj asdl;kfj as;lkdfj alksdjf lkash dflkja hsdfkjas dfjj slkaj fdahsdf iuahwef iasdb fjkasdhfasuhfeiuashdflku ahseufkhasdkflj naskdf ajksdfnkjashdflkjashdfjklah sdfkjhasdifuoashfklajsdnf kjasndfkjashefioua hsdkfj haskldfh aisludh fliuasn flkjas dfjklasdh fkh asd fhkjasdh fhasd hfljksahf jklsa hflsakj hdfkjl ashjkdf haksTesting description"
+description: "A Desktop Application made for a volunteer relief agency. The app’s purpose is to streamline the data entry process for statistical computation. JRA receives hundreds of paper surveys and they needed a way to digitalize the data and get statistical computations back from it. This is what the survey data entry app accomplishes."
 mainImage: "./jra-main.png"
+tech:
+    - React
+    - Electron
+    - Firebase
+    - R
 ---
