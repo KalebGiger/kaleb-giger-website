@@ -1,6 +1,6 @@
 ---
 slug: "/components/sections/Portfolio/Portfolio"
-date: "2020-08-25"
+date: "2020-08-04"
 title: "The Table Website"
 subtitle: "A website developed for a local church."
 company: "The Table"

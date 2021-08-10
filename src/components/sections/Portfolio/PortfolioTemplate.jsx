@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Collapse from 'react-bootstrap/Collapse';
 import Row from 'react-bootstrap/Row';
+import Carousel from 'react-bootstrap/Carousel'
 
 export function PortfolioTemplate(props) {
 
@@ -11,11 +12,11 @@ export function PortfolioTemplate(props) {
     const [open, setOpen] = useState(false);
 
     return (
-        <div className='row-container'>
+        <div>
             {/* {alternate ? */}
-            <Row className={alternate ? 'project-row-alternate' : 'project-row'} >
+            <Row className={alternate ? 'row-container--alt' : 'row-container'}>
                 <Col className='project-description-column-container'>
-                    <div className={open ? 'project-description-column-open' : 'project-description-column-alt'}>
+                    <div className={!open && alternate ? 'project-description-column--alt' : 'project-description-column'}>
                         <h2>{title}</h2>
                         <h4 className='company-name'>{company}</h4>
                         <Collapse in={open}>
@@ -33,48 +34,63 @@ export function PortfolioTemplate(props) {
                     </div>
                 </Col>
                 <Col className="col-image-container">
-                    {/* {open ?
-                                <Carousel>
-                                    {images && images.map((image, index) => {
-                                        return (
-                                            <Carousel.Item>
-                                                <img
-                                                    className="d-block w-100"
-                                                    src={image}
-                                                    alt="First slide"
-                                                />
-                                             
-                                            </Carousel.Item>
-                                        )
-                                    })}
-                                </Carousel>
-                                :
-                                <div>
-                                    <Image className="portfolio-image" src={mainImage} />
-                                    <div className="screen-line" />
-                                    <div className="image-overlay" />
-                                </div>
-                            } */}
+                    {open ?
+                        <Carousel>
+                            {images && images.map((image, index) => {
+                                return (
+                                    <Carousel.Item>
+                                        <img
+                                            className="d-block w-100"
+                                            src={image}
+                                            alt="First slide"
+                                        />
+
+                                    </Carousel.Item>
+                                )
+                            })}
+                        </Carousel>
+                        :
+                        <div>
+                            <GatsbyImage image={getImage(mainImage)} alt={title} className="portfolio-image" />
+                            {/* <Image className="portfolio-image" src={mainImage} /> */}
+                            <div className="screen-line" />
+                            <div className="image-overlay" />
+                        </div>
+                    }
                     {/* <div className="portfolio-image-overlay" /> */}
-                    <div>
-                        <GatsbyImage image={getImage(mainImage)} alt={title} className="portfolio-image" />
-                        {/* <Image className="portfolio-image" src={mainImage} /> */}
-                        <div className="screen-line" />
-                        <div className="image-overlay" />
-                    </div>
+
                 </Col>
             </Row>
             {/* :
                 <Row className='project-row'>
                     <Col className="col-image-container">
-                        <GatsbyImage image={getImage(mainImage)} alt={title} className="portfolio-image" />
-                        <div className="screen-line" />
-                        <div className="image-overlay" />
+                        {open ?
+                            <Carousel>
+                                {images && images.map((image, index) => {
+                                    return (
+                                        <Carousel.Item>
+                                            <img
+                                                className="d-block w-100"
+                                                src={image}
+                                                alt="First slide"
+                                            />
+
+                                        </Carousel.Item>
+                                    )
+                                })}
+                            </Carousel>
+                            :
+                            <div>
+                                <GatsbyImage image={getImage(mainImage)} alt={title} className="portfolio-image" />
+                                <div className="screen-line" />
+                                <div className="image-overlay" />
+                            </div>
+                        }
                     </Col>
                     <Col className='project-description-column-container'>
-                        <div className={open ? 'project-description-column-open' : 'project-description-column'}>
+                        <div className={!open && 'project-description-column'}>
                             <h2>{title}</h2>
-                            <h4>{company}</h4>
+                            <h4 className='company-name'>{company}</h4>
                             <Collapse in={open}>
                                 <p className='project-description'>
                                     {description}
@@ -90,8 +106,8 @@ export function PortfolioTemplate(props) {
                         </div>
                     </Col>
 
-                </Row>
-            } */}
+                </Row> */}
+            {/* } */}
 
         </div>
     )

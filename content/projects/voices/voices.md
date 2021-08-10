@@ -1,6 +1,6 @@
 ---
 slug: "/components/sections/Portfolio/Portfolio"
-date: "2020-08-23"
+date: "2020-08-06"
 title: "Voices"
 subtitle: "A progressive web app developed to streamline handling customer feedback for the bank."
 company: "WSFS Bank"

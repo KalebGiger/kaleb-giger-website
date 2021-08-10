@@ -38,12 +38,12 @@ export function Portfolio() {
 
   const projectInner = (node, index) => {
     const { frontmatter, html } = node;
-    const { title, subtitle, description, mainImage, company } = frontmatter;
+    const { title, subtitle, description, mainImage, company, images } = frontmatter;
 
     return (
       <PortfolioTemplate
         mainImage={mainImage}
-        images={mainImage}
+        images={images}
         subtitle={subtitle}
         description={description}
         title={title}

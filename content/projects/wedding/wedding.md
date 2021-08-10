@@ -1,6 +1,6 @@
 ---
 slug: "/components/sections/Portfolio/Portfolio"
-date: "2020-08-22"
+date: "2020-08-02"
 title: "Wedding website"
 subtitle: "A website developed for my wedding."
 company: "The Gigers"

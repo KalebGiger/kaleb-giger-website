@@ -1,6 +1,6 @@
 ---
 slug: "/components/sections/Portfolio/Portfolio"
-date: "2020-08-24"
+date: "2020-08-05"
 title: "Survey Data Entry App"
 subtitle: "A desktop application that expedites the data entry process and allows for data analysis."
 company: "Jewish Relief Agency"

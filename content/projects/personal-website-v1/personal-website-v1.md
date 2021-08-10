@@ -1,7 +1,7 @@
 ---
 slug: "/components/sections/Portfolio/Portfolio"
-date: "2020-08-22"
-title: "Personal Website"
+date: "2020-08-01"
+title: "Personal Website v1"
 subtitle: "First version of my personal website."
 company: "Kaleb Giger"
 description: "This was the first version of my personal website."
