@@ -5,7 +5,9 @@ title: "Personal Website v1"
 subtitle: "First version of my personal website."
 company: "Kaleb Giger"
 description: "This was the first version of my personal website."
-mainImage: "./personal-website-v1-main.png"
+mainImage: "./images/personal-website-v1-main.png"
+images:
+    - ./images/personal-website-v1-main.png
 tech:
     - Wordpress
     - CSS

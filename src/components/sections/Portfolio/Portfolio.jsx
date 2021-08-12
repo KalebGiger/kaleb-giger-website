@@ -25,6 +25,11 @@ export function Portfolio() {
                   gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
                 }
               }
+              images {
+                childImageSharp {
+                  gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+                }
+              }
               company
             }
             html
