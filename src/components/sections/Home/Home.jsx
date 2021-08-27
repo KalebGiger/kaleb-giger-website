@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 // import { HashLink as Link } from 'react-router-hash-link';
 import { AnchorLink } from "gatsby-plugin-anchor-links";
+import { FadeInWhenVisible } from '../../shared/FadeInWhenVisible'
 
 export function Home() {
 
@@ -13,14 +14,22 @@ export function Home() {
             <Row>
                 <Col className="hero">
                     <div>
-                        <h3 className='hero-intro'><i>Hi, my name is</i></h3>
+                        <FadeInWhenVisible duration={.25}>
+                            <h3 className='hero-intro'><i>Hi, my name is</i></h3>
+                        </FadeInWhenVisible>
+
                         <div className="typewriter-container">
                             <div className="typewriter-effect">
-                                <h1 className='hero-name'>Kaleb Giger.</h1>
+                                <h1 className='hero-name'>Kaleb Giger,</h1>
                             </div>
                         </div>
-                        <h1 className='hero-subtitle'>I'm a software engineer.</h1>
-                        <Button as={AnchorLink} smooth to="/#about" variant="outline-primary">About me</Button>
+                        <FadeInWhenVisible duration={.5}>
+                            <h1 className='hero-subtitle'>Software Engineer</h1>
+                        </FadeInWhenVisible>
+                        <FadeInWhenVisible duration={.75}>
+                            <Button as={AnchorLink} smooth to="/#about" variant="outline-primary">About me</Button>
+                        </FadeInWhenVisible>
+
                     </div>
                 </Col>
             </Row>

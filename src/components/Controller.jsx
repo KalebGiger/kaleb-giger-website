@@ -19,7 +19,7 @@ export function Controller() {
 
             <section id="home" className="section-one">
                 <Home />
-                <AltDivider color='#00ccff' />
+                <AltDivider color='#09222e' />
             </section>
             <section id="about" className="section-two">
                 <About />

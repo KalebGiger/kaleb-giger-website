@@ -5,7 +5,10 @@ title: "Survey Data Entry App"
 subtitle: "A desktop application that expedites the data entry process and allows for data analysis."
 company: "Jewish Relief Agency"
 description: "A Desktop Application made for a volunteer relief agency. The app’s purpose is to streamline the data entry process for statistical computation. JRA receives hundreds of paper surveys and they needed a way to digitalize the data and get statistical computations back from it. This is what the survey data entry app accomplishes."
-mainImage: "./jra-main.png"
+mainImage: "./images/jra-main.png"
+images:
+    - ./images/jra-main.png
+
 tech:
     - React
     - Electron

@@ -16,7 +16,9 @@ export function PortfolioTemplate(props) {
             {/* {alternate ? */}
             <Row className={alternate ? 'row-container--alt' : 'row-container'}>
                 <Col className='project-description-column-container'>
-                    <div className={!open && alternate ? 'project-description-column--alt' : 'project-description-column'}>
+                    <div
+                        className={!open && alternate ? 'project-description-column--alt' : open ? 'project-description-column-alt--open' : 'project-description-column'}
+                    >
                         <h2>{title}</h2>
                         <h4 className='company-name'>{company}</h4>
                         <Collapse in={open}>
@@ -35,16 +37,16 @@ export function PortfolioTemplate(props) {
                 </Col>
                 <Col className="col-image-container">
                     {open ?
-                        <Carousel>
+                        <Carousel
+                            nextLabel=''
+                            prevLabel=''
+                            indicators={true}
+                            controls={true}
+                        >
                             {images && images.map((image, index) => {
                                 return (
                                     <Carousel.Item>
-                                        <img
-                                            className="d-block w-100"
-                                            src={image}
-                                            alt="First slide"
-                                        />
-
+                                        <GatsbyImage image={getImage(image)} alt={image} />
                                     </Carousel.Item>
                                 )
                             })}
@@ -53,8 +55,8 @@ export function PortfolioTemplate(props) {
                         <div>
                             <GatsbyImage image={getImage(mainImage)} alt={title} className="portfolio-image" />
                             {/* <Image className="portfolio-image" src={mainImage} /> */}
-                            <div className="screen-line" />
-                            <div className="image-overlay" />
+                            {/* <div className="screen-line" />
+                            <div className="image-overlay" /> */}
                         </div>
                     }
                     {/* <div className="portfolio-image-overlay" /> */}

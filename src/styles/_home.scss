@@ -25,5 +25,5 @@
         color: map-get($theme-colors, secondary-text);
     }
 
-    @include typewriter(1.5s, 24);
+    @include typewriter(1.5s, 26);
 }
