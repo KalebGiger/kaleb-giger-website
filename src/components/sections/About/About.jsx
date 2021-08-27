@@ -13,8 +13,7 @@ import { FadeInWhenVisible } from '../../shared/FadeInWhenVisible'
 export function About() {
     return (
         <Container className="about-page-container">
-            <FadeInWhenVisible>
-
+            <FadeInWhenVisible duration={.25}>
                 <div className="typewriter-container">
                     <div className="typewriter-effect">
                         <h1 className='page-header'>About me</h1>
@@ -25,22 +24,29 @@ export function About() {
             <Row>
                 <Col>
                     <div>
-                        <p className='bio'>
-                            Hi, I'm Kaleb. I'm a full-stack developer with over 5 years of experience in computer science
-                            and more than 2 years of software engineering job experience.
-                        </p>
-                        <div className="recent-tech">
-                            <h5 className='bio'>Recent technologies</h5>
-                            <Row className='bio'>
-                                <Col>
-                                    <CustomList />
-                                </Col>
-                            </Row>
-                        </div>
+                        <FadeInWhenVisible duration={.5}>
+
+                            <p className='bio'>
+                                Hi, I'm Kaleb. I'm a full-stack developer with over 5 years of experience in computer science
+                                and more than 2 years of software engineering job experience.
+                            </p>
+                        </FadeInWhenVisible>
+                        <FadeInWhenVisible duration={.75}>
+                            <div className="recent-tech">
+                                <h5 className='bio'>Recent technologies</h5>
+                                <Row className='bio'>
+                                    <Col>
+                                        <CustomList />
+                                    </Col>
+                                </Row>
+                            </div>
+                        </FadeInWhenVisible>
                     </div>
                 </Col>
                 <Col className='portrait-container'>
-                    <Image src={portrait} roundedCircle />
+                    <FadeInWhenVisible duration={.35}>
+                        <Image src={portrait} roundedCircle />
+                    </FadeInWhenVisible>
                 </Col>
             </Row>
         </Container>

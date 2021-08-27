@@ -20,11 +20,11 @@ export function Home() {
 
                         <div className="typewriter-container">
                             <div className="typewriter-effect">
-                                <h1 className='hero-name'>Kaleb Giger.</h1>
+                                <h1 className='hero-name'>Kaleb Giger,</h1>
                             </div>
                         </div>
                         <FadeInWhenVisible duration={.5}>
-                            <h1 className='hero-subtitle'>I'm a software engineer.</h1>
+                            <h1 className='hero-subtitle'>Software Engineer</h1>
                         </FadeInWhenVisible>
                         <FadeInWhenVisible duration={.75}>
                             <Button as={AnchorLink} smooth to="/#about" variant="outline-primary">About me</Button>

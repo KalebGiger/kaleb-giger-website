@@ -2,6 +2,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import { PortfolioTemplate } from './PortfolioTemplate';
+import { FadeInWhenVisible } from '../../shared/FadeInWhenVisible'
 
 export function Portfolio() {
 
@@ -60,11 +61,13 @@ export function Portfolio() {
 
   return (
     <Container className="portfolio-page-container">
-      <div className="typewriter-container">
-        <div className="typewriter-effect">
-          <h1 className='page-header'>Portfolio</h1>
+      <FadeInWhenVisible duration={.25}>
+        <div className="typewriter-container">
+          <div className="typewriter-effect">
+            <h1 className='page-header'>Portfolio</h1>
+          </div>
         </div>
-      </div>
+      </FadeInWhenVisible>
 
       <div className="portfolio-content">
         {projects && projects.map(({ node }, index) => (
