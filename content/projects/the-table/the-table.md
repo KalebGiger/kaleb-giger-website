@@ -10,4 +10,7 @@ images:
     - ./images/the-table-main.png
 
 tech:
+    - HTML
+    - CSS
+    - Tithe.ly
 ---

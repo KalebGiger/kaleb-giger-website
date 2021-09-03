@@ -18,16 +18,8 @@ images:
     - ./images/Capture6.png
 tech:
     - React
-    - Jest
-    - Enzyme
     - Nginx
-    - Azure AD
-    - JSX
-    - JavaScript
-    - HTML
-    - CSS
-    - Material-UI
     - Node.js
-    - React Testing Library
-    - Git
+    - Jest
+    - Material-UI
 ---

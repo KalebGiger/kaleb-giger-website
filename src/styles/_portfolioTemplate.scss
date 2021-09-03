@@ -142,6 +142,29 @@ h3 {
 
 .project-description-column-container {
     position: relative;
+    .tech-list {
+        list-style: none;
+        // position: absolute;
+        // top: -1000em;
+        // left: 0px;
+    }
+    // li::before {
+    //     content: "\2013"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    //     color: map-get($theme-colors, primary); /* Change the color */
+    //     display: inline-block; /* Needed to add space between the bullet and the text */
+    //     width: 1em; /* Also needed for space (tweak if needed) */
+    //     margin-left: -1em; /* Also needed for space (tweak if needed) */
+    // }
+    .tech {
+        // margin-left: 20px;
+        padding-left: 40px;
+
+        // margin-right: 5px;
+    }
+    li {
+        color: map-get($theme-colors, secondary-text);
+        display: inline-block;
+    }
 }
 
 .project-description-column {

@@ -32,6 +32,7 @@ export function Portfolio() {
                 }
               }
               company
+              tech
             }
             html
           }
@@ -44,7 +45,7 @@ export function Portfolio() {
 
   const projectInner = (node, index) => {
     const { frontmatter, html } = node;
-    const { title, subtitle, description, mainImage, company, images } = frontmatter;
+    const { title, subtitle, description, mainImage, company, images, tech } = frontmatter;
 
     return (
       <PortfolioTemplate
@@ -55,6 +56,7 @@ export function Portfolio() {
         title={title}
         alternate={index % 2 ? true : false}
         company={company}
+        tech={tech}
       />
     );
   };

@@ -5,10 +5,11 @@ import Col from 'react-bootstrap/Col';
 import Collapse from 'react-bootstrap/Collapse';
 import Row from 'react-bootstrap/Row';
 import Carousel from 'react-bootstrap/Carousel'
+// import { AiFillGithub } from 'react-icons/fa';
 
 export function PortfolioTemplate(props) {
 
-    const { title, description, subtitle, mainImage, images, alternate, company } = props;
+    const { title, description, subtitle, mainImage, images, alternate, company, tech } = props;
     const [open, setOpen] = useState(false);
 
     return (
@@ -21,6 +22,16 @@ export function PortfolioTemplate(props) {
                     >
                         <h2>{title}</h2>
                         <h4 className='company-name'>{company}</h4>
+                        <ul className='tech-list'>
+                            {tech && tech.length > 0 && tech.map((t, index) => {
+                                return (
+                                    <li className={index != 0 && 'tech'}>
+                                        {t}
+                                    </li>
+
+                                )
+                            })}
+                        </ul>
                         <Collapse in={open}>
                             <p className='project-description'>
                                 {description}
@@ -33,6 +44,7 @@ export function PortfolioTemplate(props) {
                         >
                             {open ? 'Read less' : 'Read more'}
                         </Button>
+                        {/* <AiFillGithub /> */}
                     </div>
                 </Col>
                 <Col className="col-image-container">
