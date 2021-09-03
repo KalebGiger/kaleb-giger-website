@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 
 export function FadeInWhenVisible(props) {
 
-    const { children, duration } = props;
+    const { children, duration, direction } = props;
 
     const controls = useAnimation();
     const [ref, inView] = useInView();
@@ -24,7 +24,7 @@ export function FadeInWhenVisible(props) {
             initial="hidden"
             variants={{
                 visible: { opacity: 1, y: 0, transition: { duration: duration ? duration : 1 } },
-                hidden: { opacity: 0, y: 100 }
+                hidden: { opacity: 0, y: direction === 'top' ? 0 : 100 }
             }}
         >
             {children}

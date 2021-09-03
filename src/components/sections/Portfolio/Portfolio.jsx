@@ -78,7 +78,9 @@ export function Portfolio() {
 
       <div className="portfolio-content">
         {projects && projects.map(({ node }, index) => (
-          <div key={index}>{projectInner(node, index)}</div>
+          <div className='project-inner-container' key={index}>
+            {projectInner(node, index)}
+          </div>
         ))}
       </div>
     </Container>
