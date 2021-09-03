@@ -12,4 +12,6 @@ tech:
     - React
     - Gatsby
     - GraphQL
+github: "https://github.com/KalebGiger/kaleb-giger-website/tree/main"
+website: "https://kalebgiger.com"
 ---

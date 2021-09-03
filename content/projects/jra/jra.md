@@ -14,4 +14,6 @@ tech:
     - Electron
     - Firebase
     - R
+github: null
+website: null
 ---

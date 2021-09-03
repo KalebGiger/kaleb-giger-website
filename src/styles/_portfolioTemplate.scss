@@ -142,12 +142,7 @@ h3 {
 
 .project-description-column-container {
     position: relative;
-    .tech-list {
-        list-style: none;
-        // position: absolute;
-        // top: -1000em;
-        // left: 0px;
-    }
+    display: flex;
     // li::before {
     //     content: "\2013"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
     //     color: map-get($theme-colors, primary); /* Change the color */
@@ -161,9 +156,31 @@ h3 {
 
         // margin-right: 5px;
     }
-    li {
+    .read-button {
+        display: inline-block;
+    }
+    .tech-container p {
         color: map-get($theme-colors, secondary-text);
         display: inline-block;
+    }
+    .project-link-container {
+        text-align: right;
+        float: right;
+        vertical-align: middle;
+        .project-link-github {
+            color: #e2e2e2;
+            padding-right: 10px;
+        }
+        .project-link {
+            color: #e2e2e2;
+        }
+        a {
+            font-size: 30px;
+            transition: 0.5s;
+        }
+        a:hover {
+            color: map-get($theme-colors, primary);
+        }
     }
 }
 

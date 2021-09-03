@@ -13,4 +13,6 @@ tech:
     - HTML
     - CSS
     - Tithe.ly
+github: null
+website: "https://bloomsburgtable.church/"
 ---

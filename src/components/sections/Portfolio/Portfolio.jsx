@@ -20,6 +20,8 @@ export function Portfolio() {
             frontmatter {
               title
               subtitle
+              github
+              website
               description
               mainImage {
                 childImageSharp {
@@ -33,6 +35,7 @@ export function Portfolio() {
               }
               company
               tech
+             
             }
             html
           }
@@ -45,7 +48,7 @@ export function Portfolio() {
 
   const projectInner = (node, index) => {
     const { frontmatter, html } = node;
-    const { title, subtitle, description, mainImage, company, images, tech } = frontmatter;
+    const { title, subtitle, description, mainImage, company, images, tech, github, website } = frontmatter;
 
     return (
       <PortfolioTemplate
@@ -57,6 +60,8 @@ export function Portfolio() {
         alternate={index % 2 ? true : false}
         company={company}
         tech={tech}
+        github={github}
+        website={website}
       />
     );
   };

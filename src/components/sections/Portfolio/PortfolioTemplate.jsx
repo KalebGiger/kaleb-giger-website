@@ -5,11 +5,14 @@ import Col from 'react-bootstrap/Col';
 import Collapse from 'react-bootstrap/Collapse';
 import Row from 'react-bootstrap/Row';
 import Carousel from 'react-bootstrap/Carousel'
-// import { AiFillGithub } from 'react-icons/fa';
+import { FaGithub } from '@react-icons/all-files/fa/FaGithub';
+import { FaExternalLinkAlt } from '@react-icons/all-files/fa/FaExternalLinkAlt';
+
+// import { FaBeer } from "@react-icons/all-files/fa/FaBeer";
 
 export function PortfolioTemplate(props) {
 
-    const { title, description, subtitle, mainImage, images, alternate, company, tech } = props;
+    const { title, description, subtitle, mainImage, images, alternate, company, tech, github, website } = props;
     const [open, setOpen] = useState(false);
 
     return (
@@ -22,28 +25,45 @@ export function PortfolioTemplate(props) {
                     >
                         <h2>{title}</h2>
                         <h4 className='company-name'>{company}</h4>
-                        <ul className='tech-list'>
+                        <div className='tech-container'>
                             {tech && tech.length > 0 && tech.map((t, index) => {
                                 return (
-                                    <li className={index != 0 && 'tech'}>
+                                    <p className={index != 0 && 'tech'}>
                                         {t}
-                                    </li>
+                                    </p>
 
                                 )
                             })}
-                        </ul>
+                        </div>
                         <Collapse in={open}>
                             <p className='project-description'>
                                 {description}
                             </p>
                         </Collapse>
-                        <Button
-                            onClick={() => setOpen(!open)}
-                            variant='outline'
-                            className='btn btn-outline-primary'
-                        >
-                            {open ? 'Read less' : 'Read more'}
-                        </Button>
+                        <div className='read-button'>
+                            <Button
+                                onClick={() => setOpen(!open)}
+                                variant='outline'
+                                className='btn btn-outline-primary'
+                            >
+                                {open ? 'Read less' : 'Read more'}
+                            </Button>
+                        </div>
+
+                        {(github || website) &&
+                            <div className='project-link-container'>
+                                {github &&
+                                    <a className='project-link-github' target="_blank" href={github} >
+                                        <FaGithub />
+                                    </a>
+                                }
+                                {website &&
+                                    <a className='project-link' target="_blank" href={website}>
+                                        <FaExternalLinkAlt />
+                                    </a>
+                                }
+                            </div>
+                        }
                         {/* <AiFillGithub /> */}
                     </div>
                 </Col>
