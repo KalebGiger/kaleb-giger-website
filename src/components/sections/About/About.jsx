@@ -22,7 +22,7 @@ export function About() {
             </FadeInWhenVisible>
 
             <Row>
-                <Col>
+                <Col xs={{ span: 12, order: 2 }} md={{ span: 6, order: 1 }}>
                     <div>
                         <FadeInWhenVisible duration={.5}>
                             <p className='bio'>
@@ -42,7 +42,7 @@ export function About() {
                         </FadeInWhenVisible>
                     </div>
                 </Col>
-                <Col className='portrait-container'>
+                <Col xs={{ span: 12, order: 1 }} md={{ span: 6, order: 2 }} className='portrait-container'>
                     <FadeInWhenVisible duration={.35}>
                         <Image src={portrait} roundedCircle />
                     </FadeInWhenVisible>

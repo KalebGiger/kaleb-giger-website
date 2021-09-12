@@ -50,19 +50,19 @@ export function PortfolioTemplate(props) {
                 }
                 <Col lg={images ? 6 : 12} md={12} className='project-description-column-container'>
                     <div
-                        className={(!open && alternate && images) ? 'project-description-column--alt' : open && images ? 'project-description-column-alt--open' : images && 'project-description-column'}
+                        className={(!open && alternate && images) ? 'project-description-column--alt' : open && images ? 'project-description-column-alt--open' : images ? 'project-description-column' : 'project-description-column-no-images'}
                     >
                         <h2>{title}</h2>
                         <h4 className='company-name'>{company}</h4>
-                        <div className='tech-container'>
+                        <Row>
                             {tech && tech.length > 0 && tech.map((t, index) => {
                                 return (
-                                    <p className={index != 0 && 'tech'}>
+                                    <Col className='tech' xs={6} md={2}>
                                         {t}
-                                    </p>
+                                    </Col>
                                 )
                             })}
-                        </div>
+                        </Row>
                         <Collapse in={open}>
                             <p className='project-description'>
                                 {description}

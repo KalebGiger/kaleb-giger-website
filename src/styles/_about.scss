@@ -2,16 +2,17 @@
 
 .about-page-container {
     .portrait-container {
-        width: 50px;
-        height: 50px;
+        text-align: center;
     }
 
     .portrait-container img {
+        margin-top: 20px;
         width: 50%;
         height: auto;
     }
 
     .bio {
+        margin-top: 20px;
         color: map-get($theme-colors, secondary-text);
     }
 
@@ -25,10 +26,6 @@
     ul {
         list-style: none; /* Remove default bullets */
     }
-
-    // ul li {
-    //     color: map-get($theme-colors, text); /* Remove default bullets */
-    // }
 
     ul li::before {
         content: "\2013"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
