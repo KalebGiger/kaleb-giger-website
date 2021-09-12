@@ -25,7 +25,6 @@ export function About() {
                 <Col>
                     <div>
                         <FadeInWhenVisible duration={.5}>
-
                             <p className='bio'>
                                 Hi, I'm Kaleb. I'm a full-stack developer with over 5 years of experience in computer science
                                 and more than 2 years of software engineering job experience.

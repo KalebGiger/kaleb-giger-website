@@ -32,7 +32,7 @@
     padding: 100px 0 200px;
     position: relative;
     z-index: 10;
-    height: 100vh;
+    // height: 100vh;
     box-sizing: border-box;
     padding-top: 100px;
 }
@@ -42,9 +42,29 @@
     // padding: 100px 0 200px;
     position: relative;
     z-index: 20;
-    height: 100vh;
+    // height: 100vh;
     box-sizing: border-box;
     padding-top: 100px;
+}
+
+.section-four {
+    background-color: map-get($theme-colors, secondary-background);
+    padding: 100px 0 200px;
+    position: relative;
+    z-index: 10;
+    // height: 100vh;
+    box-sizing: border-box;
+    padding-top: 100px;
+}
+
+.footer {
+    background-color: map-get($theme-colors, secondary-background);
+    position: relative;
+    z-index: 10;
+    // height: 100vh;
+    box-sizing: border-box;
+    padding-top: 100px;
+    text-align: center;
 }
 
 @media screen and (max-width: 767px) {

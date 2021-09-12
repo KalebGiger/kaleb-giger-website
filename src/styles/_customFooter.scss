@@ -1,0 +1,13 @@
+@import "mixins";
+
+.footer-container {
+    background-color: map-get($theme-colors, secondary-background);
+
+    p {
+        color: map-get($theme-colors, secondary-text);
+        margin-bottom: 0;
+        padding-bottom: 20px;
+    }
+
+    @include typewriter(1s, 16);
+}

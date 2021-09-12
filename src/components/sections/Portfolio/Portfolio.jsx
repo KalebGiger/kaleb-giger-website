@@ -57,7 +57,7 @@ export function Portfolio() {
         subtitle={subtitle}
         description={description}
         title={title}
-        alternate={index % 2 ? true : false}
+        alternate={index % 2 ? false : true}
         company={company}
         tech={tech}
         github={github}

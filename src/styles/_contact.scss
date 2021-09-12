@@ -1,0 +1,14 @@
+@import "mixins";
+
+.contact-page-container {
+    .page-header {
+        color: map-get($theme-colors, text);
+        font-weight: 900;
+    }
+    
+    .bio {
+        color: map-get($theme-colors, secondary-text);
+    }
+
+    @include typewriter(1s, 16);
+}

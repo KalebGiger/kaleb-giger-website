@@ -18,8 +18,37 @@ export function PortfolioTemplate(props) {
     return (
         <div>
             {/* {alternate ? */}
-            <Row className={alternate ? 'row-container--alt' : 'row-container'}>
-                <Col className='project-description-column-container'>
+            <Row className="justify-content-md-center" className={alternate ? 'row-container--alt' : 'row-container'}>
+                {images &&
+                    <Col lg={images ? 6 : 12} md={12} className="col-image-container">
+                        {open ?
+                            <Carousel
+                                nextLabel=''
+                                prevLabel=''
+                                indicators={true}
+                                controls={true}
+                            >
+                                {images && images.map((image, index) => {
+                                    return (
+                                        <Carousel.Item>
+                                            <GatsbyImage image={getImage(image)} alt={image} />
+                                        </Carousel.Item>
+                                    )
+                                })}
+                            </Carousel>
+                            :
+                            <div>
+                                <GatsbyImage image={getImage(mainImage)} alt={title} className="portfolio-image" />
+                                {/* <Image className="portfolio-image" src={mainImage} /> */}
+                                {/* <div className="screen-line" />
+                            <div className="image-overlay" /> */}
+                            </div>
+                        }
+                        {/* <div className="portfolio-image-overlay" /> */}
+
+                    </Col>
+                }
+                <Col lg={images ? 6 : 12} md={12} className='project-description-column-container'>
                     <div
                         className={(!open && alternate && images) ? 'project-description-column--alt' : open && images ? 'project-description-column-alt--open' : images && 'project-description-column'}
                     >
@@ -31,7 +60,6 @@ export function PortfolioTemplate(props) {
                                     <p className={index != 0 && 'tech'}>
                                         {t}
                                     </p>
-
                                 )
                             })}
                         </div>
@@ -67,35 +95,6 @@ export function PortfolioTemplate(props) {
                         {/* <AiFillGithub /> */}
                     </div>
                 </Col>
-                {images &&
-                    <Col className="col-image-container">
-                        {open ?
-                            <Carousel
-                                nextLabel=''
-                                prevLabel=''
-                                indicators={true}
-                                controls={true}
-                            >
-                                {images && images.map((image, index) => {
-                                    return (
-                                        <Carousel.Item>
-                                            <GatsbyImage image={getImage(image)} alt={image} />
-                                        </Carousel.Item>
-                                    )
-                                })}
-                            </Carousel>
-                            :
-                            <div>
-                                <GatsbyImage image={getImage(mainImage)} alt={title} className="portfolio-image" />
-                                {/* <Image className="portfolio-image" src={mainImage} /> */}
-                                {/* <div className="screen-line" />
-                            <div className="image-overlay" /> */}
-                            </div>
-                        }
-                        {/* <div className="portfolio-image-overlay" /> */}
-
-                    </Col>
-                }
             </Row>
             {/* :
                 <Row className='project-row'>

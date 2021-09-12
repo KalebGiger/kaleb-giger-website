@@ -27,7 +27,18 @@
 
     .hero-subtitle {
         color: map-get($theme-colors, secondary-text);
+
     }
 
-    @include typewriter(1.5s, 26);
+    @media only screen and (max-width: 690px) {
+        h1 {
+            font-size: 25pt;
+        }
+        .hero-subtitle {
+            margin-top: 20px;
+
+        }
+    }
+
+    @include typewriter(1.5s, 24);
 }
