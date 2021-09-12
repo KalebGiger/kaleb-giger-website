@@ -21,7 +21,7 @@ export function PortfolioTemplate(props) {
             <Row className={alternate ? 'row-container--alt' : 'row-container'}>
                 <Col className='project-description-column-container'>
                     <div
-                        className={!open && alternate ? 'project-description-column--alt' : open ? 'project-description-column-alt--open' : 'project-description-column'}
+                        className={(!open && alternate && images) ? 'project-description-column--alt' : open && images ? 'project-description-column-alt--open' : images && 'project-description-column'}
                     >
                         <h2>{title}</h2>
                         <h4 className='company-name'>{company}</h4>
@@ -67,33 +67,35 @@ export function PortfolioTemplate(props) {
                         {/* <AiFillGithub /> */}
                     </div>
                 </Col>
-                <Col className="col-image-container">
-                    {open ?
-                        <Carousel
-                            nextLabel=''
-                            prevLabel=''
-                            indicators={true}
-                            controls={true}
-                        >
-                            {images && images.map((image, index) => {
-                                return (
-                                    <Carousel.Item>
-                                        <GatsbyImage image={getImage(image)} alt={image} />
-                                    </Carousel.Item>
-                                )
-                            })}
-                        </Carousel>
-                        :
-                        <div>
-                            <GatsbyImage image={getImage(mainImage)} alt={title} className="portfolio-image" />
-                            {/* <Image className="portfolio-image" src={mainImage} /> */}
-                            {/* <div className="screen-line" />
+                {images &&
+                    <Col className="col-image-container">
+                        {open ?
+                            <Carousel
+                                nextLabel=''
+                                prevLabel=''
+                                indicators={true}
+                                controls={true}
+                            >
+                                {images && images.map((image, index) => {
+                                    return (
+                                        <Carousel.Item>
+                                            <GatsbyImage image={getImage(image)} alt={image} />
+                                        </Carousel.Item>
+                                    )
+                                })}
+                            </Carousel>
+                            :
+                            <div>
+                                <GatsbyImage image={getImage(mainImage)} alt={title} className="portfolio-image" />
+                                {/* <Image className="portfolio-image" src={mainImage} /> */}
+                                {/* <div className="screen-line" />
                             <div className="image-overlay" /> */}
-                        </div>
-                    }
-                    {/* <div className="portfolio-image-overlay" /> */}
+                            </div>
+                        }
+                        {/* <div className="portfolio-image-overlay" /> */}
 
-                </Col>
+                    </Col>
+                }
             </Row>
             {/* :
                 <Row className='project-row'>

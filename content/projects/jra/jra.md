@@ -8,6 +8,8 @@ description: "A Desktop Application made for a volunteer relief agency. The appâ
 mainImage: "./images/jra-main.png"
 images:
     - ./images/jra-main.png
+    - ./images/jra-survey-2.png
+    - ./images/jra-survey-3.png
 
 tech:
     - React
