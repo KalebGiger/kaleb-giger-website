@@ -23,7 +23,7 @@ export function CustomNavbar() {
                             <Nav.Link as={AnchorLink} to="/#home" href="#home">Home</Nav.Link>
                             <Nav.Link as={AnchorLink} to="/#about" href="#about">About</Nav.Link>
                             <Nav.Link as={AnchorLink} to="/#portfolio" href="#portfolio">Portfolio</Nav.Link>
-                            <Nav.Link as={AnchorLink} to="/#experience" href="#experience">Experience</Nav.Link>
+                            <Nav.Link as={AnchorLink} to="/#contact" href="#contact">Contact</Nav.Link>
                             <Nav.Link >Resume</Nav.Link>
                             <Nav.Link target="_blank" href={'https://www.linkedin.com/in/kalebgiger'}>
                                 <FaLinkedin />
