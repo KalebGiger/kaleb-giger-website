@@ -3,6 +3,7 @@
 .sticky-top {
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
+    position: absolute;
     .navbar-links {
         a {
             position: relative;

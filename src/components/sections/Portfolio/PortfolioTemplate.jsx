@@ -22,20 +22,23 @@ export function PortfolioTemplate(props) {
                 {images &&
                     <Col lg={images ? 6 : 12} md={12} className="col-image-container">
                         {open ?
-                            <Carousel
-                                nextLabel=''
-                                prevLabel=''
-                                indicators={true}
-                                controls={true}
-                            >
-                                {images && images.map((image, index) => {
-                                    return (
-                                        <Carousel.Item>
-                                            <GatsbyImage image={getImage(image)} alt={image} />
-                                        </Carousel.Item>
-                                    )
-                                })}
-                            </Carousel>
+                            images.length > 1 ?
+                                <Carousel
+                                    nextLabel=''
+                                    prevLabel=''
+                                    indicators={true}
+                                    controls={true}
+                                >
+                                    {images && images.map((image, index) => {
+                                        return (
+                                            <Carousel.Item>
+                                                <GatsbyImage image={getImage(image)} alt={image} />
+                                            </Carousel.Item>
+                                        )
+                                    })}
+                                </Carousel>
+                                :
+                                <GatsbyImage image={getImage(mainImage)} alt={mainImage} />
                             :
                             <div>
                                 <GatsbyImage image={getImage(mainImage)} alt={title} className="portfolio-image" />
@@ -54,15 +57,15 @@ export function PortfolioTemplate(props) {
                     >
                         <h2>{title}</h2>
                         <h4 className='company-name'>{company}</h4>
-                        <Row>
+                        <div className='tech-container'>
                             {tech && tech.length > 0 && tech.map((t, index) => {
                                 return (
-                                    <Col className='tech' xs={6} md={2}>
+                                    <div className={index === 0 ? 'first-tech' : 'tech'}>
                                         {t}
-                                    </Col>
+                                    </div>
                                 )
                             })}
-                        </Row>
+                        </div>
                         <Collapse in={open}>
                             <p className='project-description'>
                                 {description}

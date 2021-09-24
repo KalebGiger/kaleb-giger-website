@@ -159,13 +159,26 @@ h3 {
         // margin-left: 20px;
         // padding-left: 40px;
         color: map-get($theme-colors, secondary-text);
-
+        margin-left: 20px;
         // margin-right: 5px;
     }
+
+    .first-tech {
+        // margin-left: 20px;
+        // padding-left: 40px;
+        color: map-get($theme-colors, secondary-text);
+        // margin-right: 5px;
+    }
+
     .read-button {
         display: inline-block;
         margin-top: 20px;
     }
+
+    .tech-container {
+        display: flex;
+    }
+
     .tech-container p {
         color: map-get($theme-colors, secondary-text);
         // display: inline-block;
