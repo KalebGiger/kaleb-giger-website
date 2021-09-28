@@ -18,6 +18,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
+        name: `Kaleb Giger`,
+        short_name: `Kaleb Giger`,
         icon: "src/images/icon.png",
       },
     },

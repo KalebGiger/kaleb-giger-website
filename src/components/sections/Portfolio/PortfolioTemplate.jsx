@@ -12,7 +12,7 @@ import { FaExternalLinkAlt } from '@react-icons/all-files/fa/FaExternalLinkAlt';
 
 export function PortfolioTemplate(props) {
 
-    const { title, description, subtitle, mainImage, images, alternate, company, tech, github, website } = props;
+    const { title, description, subtitle, mainImage, images, alternate, company, tech, github, website, last } = props;
     const [open, setOpen] = useState(false);
 
     return (
@@ -53,7 +53,7 @@ export function PortfolioTemplate(props) {
                 }
                 <Col lg={images ? 6 : 12} md={12} className='project-description-column-container'>
                     <div
-                        className={(!open && alternate && images) ? 'project-description-column--alt' : open && images ? 'project-description-column-alt--open' : images ? 'project-description-column' : 'project-description-column-no-images'}
+                        className={(!open && alternate && images) ? 'project-description-column--alt' : open && images ? 'project-description-column-alt--open' : images ? 'project-description-column' : last ? 'project-description-column-no-images--last' : 'project-description-column-no-images'}
                     >
                         <h2>{title}</h2>
                         <h4 className='company-name'>{company}</h4>

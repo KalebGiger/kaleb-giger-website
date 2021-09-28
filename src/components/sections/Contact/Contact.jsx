@@ -27,14 +27,14 @@ export function Contact() {
             </FadeInWhenVisible>
             <FadeInWhenVisible duration={.5}>
                 <p className='bio'>
-                    If you would like to get in touch with me, please email me at kalebrgiger@gmail.com.
+                    If you would like to get in touch with me, please email me at <a href={'mailto:kalebrgiger@gmail.com'}>kalebrgiger@gmail.com</a>.
                 </p>
             </FadeInWhenVisible>
             <FadeInWhenVisible duration={.75}>
                 <Button
                     onClick={() => handleOpenContact()}
                     variant='outline'
-                    className='btn btn-outline-primary'
+                    className='btn btn-outline-primary contact-button'
                 >
                     Contact
                 </Button>

@@ -6,6 +6,10 @@ import Button from 'react-bootstrap/Button'
 // import { HashLink as Link } from 'react-router-hash-link';
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import { FadeInWhenVisible } from '../../shared/FadeInWhenVisible'
+import Nav from 'react-bootstrap/Nav'
+import Pdf from '../../../documents/Kaleb Giger - Resume.pdf';
+import { FaLinkedin } from '@react-icons/all-files/fa/FaLinkedin';
+import { FaGithub } from '@react-icons/all-files/fa/FaGithub';
 
 export function Home() {
 
@@ -31,6 +35,13 @@ export function Home() {
                         <FadeInWhenVisible duration={.75}>
                             <Button className='about-button' as={AnchorLink} smooth to="/#about" variant="outline-primary">About me</Button>
                         </FadeInWhenVisible>
+                        <Button href={Pdf} target="_blank" variant='outline' className='btn btn-outline-primary navigation-link'>Resume</Button>
+                        <Nav.Link className='navigation-link' target="_blank" href={'https://www.linkedin.com/in/kalebgiger'}>
+                            <FaLinkedin />
+                        </Nav.Link>
+                        <Nav.Link className='navigation-link' target="_blank" href={'https://github.com/kalebgiger'}>
+                            <FaGithub />
+                        </Nav.Link>
                     </div>
                 </Col>
             </Row>

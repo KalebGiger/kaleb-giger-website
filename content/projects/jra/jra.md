@@ -15,7 +15,7 @@ tech:
     - React
     - Electron
     - Firebase
-    - R
+    - Node.js
 github: null
 website: null
 ---

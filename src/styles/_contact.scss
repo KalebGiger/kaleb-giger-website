@@ -5,9 +5,19 @@
         color: map-get($theme-colors, text);
         font-weight: 900;
     }
-    
+
     .bio {
         color: map-get($theme-colors, secondary-text);
+        margin-top: 20px;
+    }
+
+    .contact-button {
+        margin-top: 20px;
+    }
+
+    a {
+        color: map-get($theme-colors, secondary-text);
+        text-decoration: none;
     }
 
     @include typewriter(1s, 16);

@@ -46,7 +46,7 @@ export function Portfolio() {
 
   const projects = data.projects.edges.filter(({ node }) => node);
 
-  const projectInner = (node, index) => {
+  const projectInner = (node, index, projects) => {
     const { frontmatter, html } = node;
     const { title, subtitle, description, mainImage, company, images, tech, github, website } = frontmatter;
 
@@ -62,6 +62,7 @@ export function Portfolio() {
         tech={tech}
         github={github}
         website={website}
+        last={index + 1 === projects.length ? true : false}
       />
     );
   };
@@ -79,7 +80,7 @@ export function Portfolio() {
       <div className="portfolio-content">
         {projects && projects.map(({ node }, index) => (
           <div className='project-inner-container' key={index}>
-            {projectInner(node, index)}
+            {projectInner(node, index, projects)}
           </div>
         ))}
       </div>

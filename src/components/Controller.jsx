@@ -3,21 +3,17 @@ import { Home } from './sections/Home/Home';
 import { About } from './sections/About/About';
 import { Portfolio } from './sections/Portfolio/Portfolio';
 import { Contact } from './sections/Contact/Contact';
-
-import DividerIcon from '../svg/divider.svg'
-// import { Experience } from './sections/Experience/Experience'
-
-import Container from 'react-bootstrap/Container';
-// import { Switch, Route } from 'react-router-dom';
 import { CustomNavbar } from './shared/CustomNavbar/CustomNavbar';
 import { CustomFooter } from './shared/CustomFooter';
-
-import { Divider } from './shared/Divider'
 import { AltDivider } from './shared/Divider'
+import { Helmet } from 'react-helmet';
 
 export function Controller() {
     return (
         <div>
+            <Helmet>
+                <title>Kaleb Giger</title>
+            </Helmet>
 
             <CustomNavbar />
 

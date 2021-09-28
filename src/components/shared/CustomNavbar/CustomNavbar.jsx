@@ -7,6 +7,8 @@ import { AnchorLink } from "gatsby-plugin-anchor-links";
 import { FaLinkedin } from '@react-icons/all-files/fa/FaLinkedin';
 import { FaGithub } from '@react-icons/all-files/fa/FaGithub';
 import { FadeInWhenVisible } from '../../shared/FadeInWhenVisible'
+import Button from 'react-bootstrap/Button'
+import Pdf from '../../../documents/Kaleb Giger - Resume.pdf';
 
 export function CustomNavbar() {
 
@@ -20,15 +22,15 @@ export function CustomNavbar() {
                 <FadeInWhenVisible direction='top' duration={.25}>
                     <Navbar.Collapse className='navbar-links' id="responsive-navbar-nav">
                         <Nav>
-                            <Nav.Link as={AnchorLink} to="/#home" href="#home">Home</Nav.Link>
-                            <Nav.Link as={AnchorLink} to="/#about" href="#about">About</Nav.Link>
-                            <Nav.Link as={AnchorLink} to="/#portfolio" href="#portfolio">Portfolio</Nav.Link>
-                            <Nav.Link as={AnchorLink} to="/#contact" href="#contact">Contact</Nav.Link>
-                            <Nav.Link >Resume</Nav.Link>
-                            <Nav.Link target="_blank" href={'https://www.linkedin.com/in/kalebgiger'}>
+                            <Nav.Link className='navigation-link' as={AnchorLink} to="/#home" href="#home">Home</Nav.Link>
+                            <Nav.Link className='navigation-link' as={AnchorLink} to="/#about" href="#about">About</Nav.Link>
+                            <Nav.Link className='navigation-link' as={AnchorLink} to="/#portfolio" href="#portfolio">Portfolio</Nav.Link>
+                            <Nav.Link className='navigation-link' as={AnchorLink} to="/#contact" href="#contact">Contact</Nav.Link>
+                            <Button href={Pdf} target="_blank" variant='outline' className='btn btn-outline-primary navigation-link'>Resume</Button>
+                            <Nav.Link className='navigation-link' target="_blank" href={'https://www.linkedin.com/in/kalebgiger'}>
                                 <FaLinkedin />
                             </Nav.Link>
-                            <Nav.Link target="_blank" href={'https://github.com/kalebgiger'}>
+                            <Nav.Link className='navigation-link' target="_blank" href={'https://github.com/kalebgiger'}>
                                 <FaGithub />
                             </Nav.Link>
                         </Nav>

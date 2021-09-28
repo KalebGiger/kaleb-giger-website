@@ -4,6 +4,16 @@
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     position: absolute;
+    .navigation-link {
+        margin-left: 20px;
+    }
+
+    @media only screen and (max-width: 974px) {
+        .navigation-link {
+            margin-left: 0;
+        }
+    }
+
     .navbar-links {
         a {
             position: relative;
@@ -44,5 +54,4 @@
             // margin: 10px;
         }
     }
- 
 }
