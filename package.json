@@ -1,5 +1,6 @@
 {
   "name": "kaleb-giger",
+  "homepage": "https://kalebgiger.com",
   "version": "1.0.0",
   "private": true,
   "description": "Kaleb Giger",
@@ -38,6 +39,7 @@
     "react": "^17.0.1",
     "react-bootstrap": "^1.6.1",
     "react-dom": "^17.0.1",
+    "react-ga": "^3.3.0",
     "react-helmet": "^6.1.0",
     "react-intersection-observer": "^8.32.0",
     "sass": "^1.36.0",
