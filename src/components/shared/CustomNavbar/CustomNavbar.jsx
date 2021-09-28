@@ -36,7 +36,6 @@ export function CustomNavbar() {
                         </Nav>
                     </Navbar.Collapse>
                 </FadeInWhenVisible >
-
             </Container>
         </Navbar>
 
